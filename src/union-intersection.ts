@@ -13,15 +13,15 @@ type JuniorDeveloper = NoobDeveloper & {
 };
 /// orr kora ke bolteci union
 
-enum Level {
-  Junior = "Junior",
-  Mid = "Mid",
-  Senior = "Senior",
-}
+// enum Level {
+//   Junior = "Junior",
+//   Mid = "Mid",
+//   Senior = "Senior",
+// }
 
 type NextLevelDeveloper = JuniorDeveloper & {
   leaderShip: number;
-  level: Level;
+  level: "Junior" | "Mid" | "Senior";
 };
 
 const newDeveloper: NoobDeveloper | JuniorDeveloper = {
@@ -34,5 +34,5 @@ const developer: JuniorDeveloper | NextLevelDeveloper = {
   name: "Ismail Hossen",
   experties: "TypeScript",
   experience: 4,
-  level: Level.Mid,
+  level: "Mid",
 };
